@@ -1,75 +1,88 @@
-﻿<!DOCTYPE html>
+﻿@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Narrow Jumbotron Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link type="text/css" href="~/css/site.css" rel="stylesheet">
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
+
     <div class="container">
-        <form id="fileForm" role="form" action="/Home/GetChosenEnvLevel" method="POST" enctype="multipart/form-data">
+        
             <div class="row">
-                <div class="form-group">
-                    <label>Environment:</label>
-                </div>
-                <div class="col-xs-5 selectContainer">
-                    <div class="form-group">
-                        <select  asp-items="ViewBag.Environments" class="form-control" id="EnvironmentLevel" name="EnvironmentLevel"></select>
-                        <input type="text" class="form-control" id="labelEnvironment" readonly @ViewBag.labelEnvironment>
+            <div class="jumbotron text-center">
+                <form role="form">
+                    <div class="col-md-6 form-group">
+                        <input type="search" size="100" id="mySearch" placeholder="Search for Summoner Name">
+                        <button type="button" class="btn btn-primary">Search</button>
+                        <label>NA</label>
+                        <input "=" " type="radio" name="region" id="EUW" value="EUW">
                     </div>
-                </div>
-                <div class="form-group col-md-12">
-                    <label>Company Ids:</label>
-                    <div id="filedrag">
-                        <textarea class="form-control" rows="5" id="textAreaCompanyIDs" placeholder="Drop Files Here"></textarea>
-                    </div>
-                </div>
-                <div class="form-group col-md-12">
-                    <label>Axp Template</label>
-                    <textarea class="form-control" rows="5" id="textAreaAXPTemplate"></textarea>
-
-                </div>
-
+                </form>
             </div>
-
-        </form>
-        <div id="messages">
-            <p>Status Messages</p>
+                
         </div>
 
-    </div>
+        <div class="row">
 
+            <div class="row marketing">
+                <div class="col-lg-6">
+                    <h4>Subheading</h4>
+                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-    <div class="container">
+                    <h4>Subheading</h4>
+                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
-    </div>
+                    <h4>Subheading</h4>
+                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                </div>
 
-    <!-- /.container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript " src="~/js/site.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+                <div class="col-lg-6">
+                    <h4>Subheading</h4>
+                    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+                    <h4>Subheading</h4>
+                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+                    <h4>Subheading</h4>
+                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                </div>
+            </div>
+        </div>
+
+            <footer class="footer">
+                <p>&copy; 2015 Company, Inc.</p>
+            </footer>
+
+        </div> <!-- /container -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-
-
 </body>
 </html>
